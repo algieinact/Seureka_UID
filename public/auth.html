@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seureka - Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi transisi */
+        .fade-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fade-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-exit {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fade-exit-active {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    </style>
+</head>
+<body class="bg-black flex min-h-screen items-center justify-center" 
+      style="background-image: url('image/bgLogin.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    <div id="auth-container" class="backdrop-filter backdrop-blur-md bg-opacity-35 border border-purple-900 rounded-lg p-8 w-full max-w-md text-white">
+        <!-- Login Form -->
+        <div id="form-login" class="auth-form fade-enter fade-enter-active">
+            <h2 class="text-3xl font-bold mb-6">Login</h2>
+            <form id="login-form" class="space-y-4" onsubmit="return validateLogin()">
+                <div>
+                    <label for="login-username" class="block text-sm font-medium text-gray-300 mb-1">Username</label>
+                    <input 
+                        type="text" 
+                        id="login-username" 
+                        name="username" 
+                        placeholder="Enter your username" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="login-password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+                        <button type="button" onclick="showForgotPassword()" class="text-sm text-purple-600 font-normal hover:underline">
+                            Forgot Password?
+                        </button>
+                    </div>
+                    <input 
+                        type="password" 
+                        id="login-password" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div class="flex flex-col items-center">
+                    <button 
+                        type="submit" 
+                        class="bg-purple-700 text-white font-semibold w-full py-3 rounded-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 mb-4"
+                    >
+                        Login
+                    </button>
+                    <p class="text-sm text-gray-500">
+                        Don't have an account? 
+                        <button type="button" onclick="showRegister()" class="text-purple-600 hover:underline">Register</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div id="form-register" class="auth-form hidden">
+            <h2 class="text-3xl font-bold mb-6">Register</h2>
+            <form id="register-form" class="space-y-4" onsubmit="return validateRegister()">
+                <div>
+                    <label for="register-username" class="block text-sm font-medium text-gray-300 mb-1">Username</label>
+                    <input 
+                        type="text" 
+                        id="register-username" 
+                        name="username" 
+                        placeholder="Choose a username" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="register-email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                    <input 
+                        type="email" 
+                        id="register-email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="register-password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+                    <input 
+                        type="password" 
+                        id="register-password" 
+                        name="password" 
+                        placeholder="Create a password" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div class="flex flex-col items-center">
+                    <button 
+                        type="submit" 
+                        class="bg-purple-700 text-white font-semibold w-full py-3 rounded-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 mb-4"
+                    >
+                        Register
+                    </button>
+                    <p class="text-sm text-gray-500">
+                        Already have an account? 
+                        <button type="button" onclick="showLogin()" class="text-purple-600 hover:underline">Login</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="form-forgot" class="auth-form hidden">
+            <h2 class="text-3xl font-bold mb-6">Forgot Password</h2>
+            <p class="text-sm text-gray-400 mb-4">
+                Enter your email address to reset your password.
+            </p>
+            <form id="forgot-form" class="space-y-4" onsubmit="return validateForgotPassword()">
+                <div>
+                    <label for="forgot-email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                    <input 
+                        type="email" 
+                        id="forgot-email" 
+                        name="email" 
+                        placeholder="Enter your email address" 
+                        class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                        required
+                    >
+                </div>
+                <div class="flex flex-col items-center">
+                    <button 
+                        type="submit" 
+                        class="bg-purple-700 text-white font-semibold w-full py-3 rounded-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 mb-4"
+                    >
+                        Send Reset Link
+                    </button>
+                    <p class="text-sm text-gray-500">
+                        Remember your password? 
+                        <button type="button" onclick="showLogin()" class="text-purple-600 hover:underline">Login</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms(showId) {
+            const forms = document.querySelectorAll('.auth-form');
+            forms.forEach(form => form.classList.add('hidden', 'fade-exit'));
+            const showForm = document.getElementById(showId);
+            showForm.classList.remove('hidden', 'fade-exit');
+            showForm.classList.add('fade-enter', 'fade-enter-active');
+        }
+
+        function showLogin() { toggleForms('form-login'); }
+        function showRegister() { toggleForms('form-register'); }
+        function showForgotPassword() { toggleForms('form-forgot'); }
+
+        // Validasi Form Login
+        function validateLogin() {
+            const username = document.getElementById('login-username').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+            if (!username || !password) {
+                alert('Please fill in both fields.');
+                return false;
+            }
+            return true;
+        }
+
+        // Validasi Form Register
+        function validateRegister() {
+            const username = document.getElementById('register-username').value.trim();
+            const email = document.getElementById('register-email').value.trim();
+            const password = document.getElementById('register-password').value.trim();
+            if (!username || !email || !password) {
+                alert('Please fill in all fields.');
+                return false;
+            }
+            return true;
+        }
+
+        // Validasi Form Forgot Password
+        function validateForgotPassword() {
+            const email = document.getElementById('forgot-email').value.trim();
+            if (!email) {
+                alert('Please enter your email address.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

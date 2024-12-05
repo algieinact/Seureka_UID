@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "daisyui": "^4.12.14",
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2",
+    "flyonui": "^1.1.0"
+  }
+}
