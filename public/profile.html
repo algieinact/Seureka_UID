@@ -56,7 +56,7 @@
                 <ul
                     class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
                     <li>
-                        <a href="index2.html"
+                        <a href="dashboard.html"
                             class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
                             aria-current="page">Home</a>
                     </li>
@@ -90,7 +90,7 @@
     </nav>
     <!-- Content Profile -->
     <div class="min-h-screen flex justify-center items-center">
-        <div class="border rounded-md bg-gray-950 px-8 py-8 w-full max-w-lg shadow-lg">
+        <div class="bg-gray-800 border border-gray-100/20 p-6 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-40">
             <!-- Title -->
             <h1 class="font-bold text-2xl text-white text-center">Your Profile</h1>
 
@@ -111,13 +111,13 @@
 
             <!-- Buttons -->
             <div class="mt-6 space-y-4">
-                <button onclick="openModal('updatePasswordModal')"
-                    class="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow">
-                    Update Password
-                </button>
                 <button onclick="openModal('editProfileModal')"
-                    class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow">
+                    class="w-full py-2 px-4 text-white font-semibold bg-black hover:bg-transparent hover:border-2 hover:text-white rounded-md focus:outline-none">
                     Edit Profile
+                </button>
+                <button onclick="openModal('updatePasswordModal')"
+                    class="w-full py-2 px-4 text-black font-semibold bg-white hover:bg-transparent hover:border-2 hover:text-white rounded-md focus:outline-none">
+                    Update Password
                 </button>
             </div>
         </div>

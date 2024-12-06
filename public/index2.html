@@ -18,6 +18,10 @@
     .sticky {
       z-index: 9999;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
@@ -78,9 +82,10 @@
       <div class="">
         <!-- Judul Hero -->
         <h1
-          class="mb-4 text-6xl font-extrabold bg-gradient-to-b from-white via-white to-violet-600 bg-clip-text text-transparent sm:text-7xl md:text-8xl lg:text-9xl">
+          class="mb-4 text-6xl font-extrabold bg-gradient-to-b from-white via-white to-violet-600 bg-clip-text text-transparent sm:text-7xl md:text-8xl lg:text-9xl animate-fade-in">
           SEUREKA
         </h1>
+
         <!-- Deskripsi -->
         <p
           class="mb-6 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-b from-white via-white to-violet-300 bg-clip-text text-transparent">
@@ -126,7 +131,7 @@
     <div class="container mx-auto"></div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Card 1 -->
-      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow card">
         <div class="flex justify-center items-center w-12 h-12 bg-gray-800 rounded-full mx-auto mb-4">
           <i class="fa-solid fa-bullseye"></i>
         </div>
@@ -138,7 +143,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow card">
         <div class="flex justify-center items-center w-12 h-12 bg-gray-800 rounded-full mx-auto mb-4">
           <i class="fa-solid fa-user-group"></i>
         </div>
@@ -150,7 +155,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+      <div class="bg-[#111111] rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow card">
         <div class="flex justify-center items-center w-12 h-12 bg-gray-800 rounded-full mx-auto mb-4">
           <i class="fa-solid fa-compass"></i>
         </div>
@@ -227,6 +232,7 @@
       }
     }
   </script>
+
 
 </body>
 

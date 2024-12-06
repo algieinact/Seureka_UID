@@ -18,21 +18,13 @@
         .sticky {
             z-index: 9999;
         }
-
-        .flex {
-            display: flex;
-        }
-
-        .h-screen {
-            height: 100vh;
-        }
     </style>
 </head>
 
 <body class="bg-gray-950 text-white">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <!-- Header Section -->
-    <nav class="px-16 backdrop-filter sticky top-0 bg-gray-950">
+    <nav class="px-16 backdrop-filter bg-gray-950 sticky top-0 backdrop-blur-md ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
             <button onclick="scrollToSection('hero')" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -56,26 +48,26 @@
                 <ul
                     class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
                     <li>
-                        <a href="help.html"
+                        <a href="dashboard.html"
                             class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="open_discussion.php"
+                        <a href="opsid_1.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Open
                             Discussion</a>
                     </li>
                     <li>
-                        <a href="about.html"
+                        <a href="community.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
                     </li>
                     <li>
-                        <a href="about.html"
+                        <a href="lg_about.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">About
                             Us</a>
                     </li>
                     <li>
-                        <a href="help.php"
+                        <a href="lg_help.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Help</a>
                     </li>
                     <div class="relative ml-4">
@@ -87,8 +79,8 @@
                         <!-- Dropdown Menu -->
                         <div id="userMenuDropdown"
                             class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50">
-                            <a href="profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
-                            <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+                            <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+                            <a href="index2.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
                         </div>
                     </div>
                 </ul>
@@ -99,19 +91,14 @@
     <div class="flex min-h-screen">
         <!-- Sidebar 1 -->
         <div id="sidebar-mini"
-            class="w-20 bg-gray-950 border-e border-purple-700 dark:border-purple-700 dark:bg-gray-950">
+            class=" h-screen w-20 bg-gray-950  dark:border-purple-700 dark:bg-gray-950">
             <!-- Content of Sidebar 1 -->
-            <div class="flex flex-col justify-center items-center gap-y-2 py-4">
-                
+            <div class="flex flex-col justify-center items-center gap-y-4 py-4">
+
                 <div class="hs-tooltip [--placement:right] inline-block">
                     <button type="button"
-                        class="hs-tooltip-toggle size-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="M331.67-310.67 541-374q16-5.33 27.5-16.83 11.5-11.5 16.83-27.5l63.34-209.34q3-9.43-4.17-16.71-7.17-7.29-16.83-4.29l-209.34 63.34q-16 5.33-27.5 16.83Q379.33-557 374-541l-63.33 209.33q-3 9.43 4.16 16.72 7.17 7.28 16.84 4.28Zm148.17-122.66q-19.51 0-33.01-13.66-13.5-13.66-13.5-33.17t13.66-33.01q13.66-13.5 33.17-13.5t33.01 13.66q13.5 13.66 13.5 33.17t-13.66 33.01q-13.66 13.5-33.17 13.5ZM480.18-80q-82.83 0-155.67-31.5-72.84-31.5-127.18-85.83Q143-251.67 111.5-324.56T80-480.33q0-82.88 31.5-155.78Q143-709 197.33-763q54.34-54 127.23-85.5T480.33-880q82.88 0 155.78 31.5Q709-817 763-763t85.5 127Q880-563 880-480.18q0 82.83-31.5 155.67Q817-251.67 763-197.46q-54 54.21-127 85.84Q563-80 480.18-80Zm.14-66.67q138.68 0 235.85-97.49 97.16-97.49 97.16-236.16 0-138.68-97.16-235.85-97.17-97.16-235.85-97.16-138.67 0-236.16 97.16-97.49 97.17-97.49 235.85 0 138.67 97.49 236.16 97.49 97.49 236.16 97.49ZM480-480Z"/></svg>
                         <span
                             class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
                             role="tooltip">
@@ -122,15 +109,8 @@
 
                 <div class="hs-tooltip [--placement:right] inline-block">
                     <button type="button"
-                        class="hs-tooltip-toggle size-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
+                        class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="M40-240q-17 0-28.5-11.5T0-280v-23q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H40Zm240 0q-17 0-28.5-11.5T240-280v-25q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v25q0 17-11.5 28.5T680-240H280Zm500 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v23q0 17-11.5 28.5T920-240H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z"/></svg>
                         <span
                             class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
                             role="tooltip">
@@ -141,13 +121,32 @@
 
                 <div class="hs-tooltip [--placement:right] inline-block">
                     <button type="button"
-                        class="hs-tooltip-toggle size-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
-                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
-                        </svg>
+                        class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                            role="tooltip">
+                            Notifications
+                        </span>
+                    </button>
+                </div>
+
+                <div class="hs-tooltip [--placement:right] inline-block">
+                    <button type="button"
+                        class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM160-473l47-47h393v-280H160v327Zm-40 137q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Zm40-184v-280 280Z"/></svg>
+                        <span
+                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                            role="tooltip">
+                            Notifications
+                        </span>
+                    </button>
+                </div>
+
+                <div class="hs-tooltip [--placement:right] inline-block">
+                    <button type="button"
+                        class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
                         <span
                             class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
                             role="tooltip">
@@ -189,7 +188,21 @@
         </main>
     </div>
 
+    <script>
+        const userMenuButton = document.getElementById("userMenuButton");
+        const userMenuDropdown = document.getElementById("userMenuDropdown");
 
+        userMenuButton.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevent the click from propagating
+            userMenuDropdown.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!userMenuButton.contains(event.target) && !userMenuDropdown.contains(event.target)) {
+                userMenuDropdown.classList.add("hidden");
+            }
+        });
+    </script>
 </body>
 
 </html>
