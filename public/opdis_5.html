@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seureka - Open Discussion</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Montserrat';
+        }
+
+        .sticky {
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-white">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Header Section -->
+    <nav class="px-16 backdrop-filter bg-gray-950 sticky top-0 backdrop-blur-md ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <!-- Logo -->
+            <button onclick="scrollToSection('hero')" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="favicon.ico" class="h-10" alt="Seureka Logo" />
+            </button>
+
+            <!-- Hamburger Button -->
+            <button data-collapse-toggle="navbar-multi-level" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                <ul
+                    class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
+                    <li>
+                        <a href="dashboard.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="opdis_1.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Open
+                            Discussion</a>
+                    </li>
+                    <li>
+                        <a href="community.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
+                    </li>
+                    <li>
+                        <a href="lg_about.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="lg_help.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Help</a>
+                    </li>
+                    <div class="relative ml-4">
+                        <button id="userMenuButton"
+                            class="block w-10 h-10 rounded-full overflow-hidden border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <img src="image/profile.jpg" alt="User Photo" class="w-full h-full object-cover">
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div id="userMenuDropdown"
+                            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50">
+                            <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+                            <a href="index2.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="dropdown-user" class="w-20 border-e bg-gray-950  dark:border-purple-700 dark:bg-gray-950 fixed top-0 left-0 z-40 h-screen pt-20 transition-transform -translate-x-full  border-r
+    border-gray-200 sm:translate-x-0 ">
+        <!-- Content of Sidebar 1 -->
+        <div class="flex flex-col justify-center items-center gap-y-4 py-4">
+            <div class="hs-tooltip [--placement:right] inline-block">
+                <button type="button"
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                        fill="#ffffff">
+                        <path
+                            d="M80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q127 0 226.5 70T851-629q7 17 .5 34T828-572q-16 5-30.5-3T777-599q-24-60-69-106t-108-71v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h40q17 0 28.5 11.5T400-440v80h-40L168-552q-3 18-5.5 36t-2.5 36q0 122 80.5 213T443-162q16 2 26.5 13.5T480-120q0 17-11.5 28.5T441-82Q288-97 184-210T80-480Zm736 352L716-228q-21 12-45 20t-51 8q-75 0-127.5-52.5T440-380q0-75 52.5-127.5T620-560q75 0 127.5 52.5T800-380q0 27-8 51t-20 45l100 100q11 11 11 28t-11 28q-11 11-28 11t-28-11ZM620-280q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Z" />
+                    </svg>
+                    <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                        role="tooltip">
+                        Home
+                    </span>
+                </button>
+            </div>
+
+            <div class="hs-tooltip [--placement:right] inline-block">
+                <button type="button"
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                        fill="#e8eaed">
+                        <path
+                            d="M40-240q-17 0-28.5-11.5T0-280v-23q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H40Zm240 0q-17 0-28.5-11.5T240-280v-25q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v25q0 17-11.5 28.5T680-240H280Zm500 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v23q0 17-11.5 28.5T920-240H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                    </svg>
+                    <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                        role="tooltip">
+                        Users
+                    </span>
+                </button>
+            </div>
+
+            <div class="hs-tooltip [--placement:right] inline-block">
+                <button type="button"
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                        fill="#ffffff">
+                        <path
+                            d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                    </svg>
+                    <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                        role="tooltip">
+                        Notifications
+                    </span>
+                </button>
+            </div>
+
+            <div class="hs-tooltip [--placement:right] inline-block">
+                <button type="button"
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                        fill="#ffffff">
+                        <path
+                            d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM160-473l47-47h393v-280H160v327Zm-40 137q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Zm40-184v-280 280Z" />
+                    </svg>
+                    <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                        role="tooltip">
+                        Notifications
+                    </span>
+                </button>
+            </div>
+
+            <div class="hs-tooltip [--placement:right] inline-block">
+                <button type="button"
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                        fill="#ffffff">
+                        <path
+                            d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                    </svg>
+                    <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-900 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-700"
+                        role="tooltip">
+                        Notifications
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex sm:ml-20 ">
+        <!-- Main Content -->
+        <main class="flex-1 min-h-screen bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-20 py-12">
+            <div class="flex min-h-screen mb-4">
+                <div class="w-3/4 relative min-h-screen ">
+                    <h1 class="font-bold text-4xl ">Create Discussion</h1>
+                    <form action="opdis_register.php" method="POST" class="space-y-4 mt-8">
+                        <div>
+                            <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Discussion
+                                name</label>
+                            <input type="text" id="username" name="username" placeholder="Enter Discussion name"
+                                class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700 "
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="dropdownHoverButton"
+                                class="block text-sm font-medium text-gray-300 mb-1">Category</label>
+                            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownCat"
+                                data-dropdown-trigger="hover"
+                                class="justify-between w-full text-gray-400 bg-gray-800 bg-opacity-40 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-400"
+                                type="button">
+                                <p>Categories</p>
+                                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownCat"
+                                class="w-full z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownHoverButton">
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Social</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Educational</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sports</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Gaming
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="username"
+                                class="block text-sm font-medium text-gray-300 mb-1">Description</label>
+                            <textarea id="username" name="username" placeholder="Enter Description"
+                                class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                                required> </textarea>
+                        </div>
+
+                        <div>
+                            <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Date</label>
+                            <input type="date" id="username" name="username" placeholder="Enter Discussion name"
+                                class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700 "
+                                required>
+                        </div>
+
+                        <div class="flex justify-between gap-4">
+                            <div class="w-full">
+                                <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Start</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Discussion name"
+                                    class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700 "
+                                    required>
+                            </div>
+                            <div class="w-full">
+                                <label for="username" class="block text-sm font-medium text-gray-300 mb-1">End</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Discussion name"
+                                    class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="image" class="w-full h-56 border-gray-800 bg-gray-800 rounded-md"
+                                placeholder="Place image">
+                            <a href=""
+                                class=" font-normal text-sm text-purple-600 hover:underline items-center justify-center flex">Choose
+                                image</a>
+                        </div>
+
+                        <div>
+                            <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Location
+                                details</label>
+                            <input type="text" id="username" name="username" placeholder="Location details"
+                                class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700 "
+                                required>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.991322344252!2d107.63457457602236!3d-6.971149370120249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68f7777aaed%3A0xa5b3ed2fa4d4020!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1686582222331!5m2!1sen!2sid"
+                            class="w-full h-48 rounded-lg shadow-md shadow-purple-700" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                        <div class="flex flex-col">
+                            <a href="dashboard.html"
+                                class="bg-purple-700 text-white font-semibold w-32 py-3 rounded-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 text-center block">
+                                Create
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="w-1/4 flex flex-col items-center">
+                    <img src="image/community/Dancer.png"
+                        class="bg-black rounded-full border border-purple-800 border-spacing-4 h-32 w-32">
+                    <a href="" class="font-normal text-sm text-purple-600 hover:underline">Choose image</a>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
