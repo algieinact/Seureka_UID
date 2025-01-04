@@ -18,6 +18,76 @@
         .sticky {
             z-index: 9999;
         }
+
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            main {
+                padding: 24px !important;
+            }
+
+            iframe {
+                height: 300px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            main {
+                padding: 16px !important;
+            }
+
+            form {
+                width: 100% !important;
+            }
+
+            .flex.min-h-screen {
+                padding: 1rem;
+            }
+
+            .text-4xl {
+                font-size: 1.875rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #dropdown-user {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                transform: none;
+                padding: 0.5rem;
+                border-top: 1px solid rgb(107, 33, 168);
+                border-right: none;
+                background-color: rgba(17, 24, 39, 0.95);
+                backdrop-filter: blur(8px);
+                z-index: 50;
+            }
+
+            #dropdown-user .flex-col {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0;
+            }
+
+            main {
+                margin-left: 0 !important;
+                padding-bottom: 5rem !important;
+            }
+
+            .flex.justify-between.gap-4 {
+                flex-direction: column;
+            }
+
+            .flex.justify-between.gap-4 > div {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -175,11 +245,11 @@
         </div>
     </div>
 
-    <div class="flex sm:ml-20 ">
+    <div class="flex sm:ml-20">
         <!-- Main Content -->
-        <main class="flex-1 min-h-screen bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-20 py-12">
+        <main class="flex-1 min-h-screen bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-4 sm:px-8 lg:px-20 py-6 sm:py-12">
             <div class="flex min-h-screen mb-4">
-                <div class="w-3/4 relative min-h-screen ">
+                <div class="w-full relative min-h-screen ">
                     <h1 class="font-bold text-4xl ">Create Discussion</h1>
                     <form action="opdis_register.php" method="POST" class="space-y-4 mt-8">
                         <div>
@@ -260,12 +330,11 @@
                             </div>
                         </div>
 
+                        
                         <div>
-                            <input type="image" class="w-full h-56 border-gray-800 bg-gray-800 rounded-md"
-                                placeholder="Place image">
-                            <a href=""
-                                class=" font-normal text-sm text-purple-600 hover:underline items-center justify-center flex">Choose
-                                image</a>
+                            <label for="imageUpload" class="block text-sm font-medium text-gray-300 mb-1">Upload Image</label>
+                            <input type="file" id="imageUpload" name="imageUpload" accept="image/*"
+                                class="w-full px-4 py-2 border border-gray-800 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-700">
                         </div>
 
                         <div>
@@ -291,17 +360,46 @@
 
                     </form>
                 </div>
-
-                <div class="w-1/4 flex flex-col items-center">
-                    <img src="image/community/Dancer.png"
-                        class="bg-black rounded-full border border-purple-800 border-spacing-4 h-32 w-32">
-                    <a href="" class="font-normal text-sm text-purple-600 hover:underline">Choose image</a>
-                </div>
-
-
             </div>
         </main>
     </div>
+    <script>
+        // Function to handle sidebar position
+        function handleSidebarPosition() {
+            const sidebar = document.getElementById('dropdown-user');
+            const main = document.querySelector('main');
+            
+            if (window.innerWidth <= 640) {
+                sidebar.classList.remove('top-0', '-translate-x-full');
+                sidebar.classList.add('bottom-0', 'translate-x-0');
+                main.classList.add('pb-20');
+            } else {
+                sidebar.classList.add('top-0');
+                sidebar.classList.remove('bottom-0');
+                main.classList.remove('pb-20');
+            }
+        }
+
+        // Function to handle form layout
+        function handleFormLayout() {
+            const timeInputs = document.querySelector('.flex.justify-between.gap-4');
+            if (window.innerWidth <= 640) {
+                timeInputs.classList.add('flex-col');
+            } else {
+                timeInputs.classList.remove('flex-col');
+            }
+        }
+
+        // Call functions on load and resize
+        window.addEventListener('load', () => {
+            handleSidebarPosition();
+            handleFormLayout();
+        });
+        window.addEventListener('resize', () => {
+            handleSidebarPosition();
+            handleFormLayout();
+        });
+    </script>
 </body>
 
 </html>

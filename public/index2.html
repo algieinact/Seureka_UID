@@ -22,6 +22,70 @@
     html {
       scroll-behavior: smooth;
     }
+    
+    .animate-fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        /* New animations */
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(145, 67, 216, 0.2);
+        }
+        
+        /* Parallax effect */
+        .parallax {
+            transition: transform 0.5s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
   </style>
 </head>
 
@@ -225,13 +289,67 @@
   </footer>
 
   <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe all sections and cards
+    document.querySelectorAll('section, .card').forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+
+    // Hero content animation
+    window.addEventListener('load', () => {
+        const heroContent = document.getElementById('heroContent');
+        heroContent.style.opacity = '1';
+        heroContent.classList.add('fade-in-up');
+    });
+
+    // Parallax effect
+    window.addEventListener('scroll', () => {
+        const parallax = document.querySelector('.parallax');
+        const scrolled = window.pageYOffset;
+        parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+
+    // Enhanced scroll function
     function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     }
-  </script>
+
+    // Navbar background opacity on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        } else {
+            nav.style.backgroundColor = 'transparent';
+        }
+    });
+
+    // Add hover animations to buttons
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('mouseenter', (e) => {
+            e.target.style.transform = 'scale(1.05)';
+        });
+        button.addEventListener('mouseleave', (e) => {
+            e.target.style.transform = 'scale(1)';
+        });
+    });
+</script>
 
 
 </body>

@@ -18,17 +18,100 @@
         .sticky {
             z-index: 9999;
         }
+
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            main {
+                padding: 36px !important;
+            }
+
+            .map-section {
+                flex-direction: column;
+                height: auto !important;
+            }
+
+            .map-container {
+                width: 100% !important;
+                height: 300px !important;
+                margin-bottom: 1rem;
+            }
+
+            .side-content {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .side-nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding-top: 0;
+                transform: none;
+            }
+            
+            .side-nav .flex-col {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .map-section {
+                margin-bottom: 1rem !important;
+            }
+
+            #dropdown-user {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                transform: none;
+                padding: 0.5rem;
+                border-top: 1px solid rgb(107, 33, 168);
+                border-right: none;
+                background-color: rgba(17, 24, 39, 0.95);
+                backdrop-filter: blur(8px);
+                z-index: 50;
+            }
+
+            #dropdown-user .flex-col {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0;
+            }
+
+            .side-nav {
+                padding-top: 0 !important;
+            }
+
+            main {
+                margin-left: 0 !important;
+                padding-bottom: 5rem !important;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-gray-950 text-white">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <!-- Header Section -->
-    <nav class="px-16 backdrop-filter bg-gray-950 sticky top-0 backdrop-blur-md ">
+    <nav class="px-4 md:px-16 backdrop-filter sticky top-0 backdrop-blur-md bg-black bg-opacity-40">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
             <button onclick="scrollToSection('hero')" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="favicon.ico" class="h-10" alt="Seureka Logo" />
+                <img src="favicon.ico" class="h-8 md:h-10" alt="Seureka Logo" />
             </button>
 
             <!-- Hamburger Button -->
@@ -58,7 +141,7 @@
                             Discussion</a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="com_1.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500 md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
                     </li>
                     <li>
@@ -174,12 +257,10 @@
         </div>
     </div>
 
-    <div class="flex sm:ml-20 ">
-        <!-- Main Content -->
-        <main class="flex-1 bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-20 py-12">
-            <div class="flex gap-6 h-[440px] mb-12">
-                <!-- Map Section -->
-                <div class="w-3/4 relative h-full">
+    <div class="flex flex-col sm:ml-20">
+        <main class="flex-1 bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-8 sm:px-12 lg:px-20 py-6 sm:py-8">
+            <div class="flex flex-col lg:flex-row gap-6 h-auto lg:h-[440px] mb-6 lg:mb-12 map-section">
+                <div class="w-full lg:w-3/4 h-[300px] lg:h-full map-container">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.991322344252!2d107.63457457602236!3d-6.971149370120249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68f7777aaed%3A0xa5b3ed2fa4d4020!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1686582222331!5m2!1sen!2sid"
                         class="w-full h-full rounded-lg shadow-md shadow-purple-700" allowfullscreen="" loading="lazy"
@@ -187,12 +268,10 @@
                     </iframe>
                 </div>
 
-                <div class="w-1/4 flex flex-col gap-4">
-                    <!-- Search -->
+                <div class="w-full lg:w-1/4 flex flex-col gap-4 side-content">
                     <input type="text" placeholder="Search"
                         class="bg-gray-800 border border-gray-100/20 py-2 px-4 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-40 w-full focus:outline-none  focus:ring-purple-700 focus:ring-2">
 
-                    <!-- Dropdown 1 -->
                     <div class="relative">
                         <button id="dropdownHoverButton" data-dropdown-toggle="dropdownType"
                             data-dropdown-trigger="hover"
@@ -205,33 +284,55 @@
                                     d="m1 1 4 4 4-4" />
                             </svg>
                         </button>
-                        <!-- Dropdown Menu -->
                         <div id="dropdownType"
                             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-full dark:bg-gray-800">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
                                 <li>
                                     <a href="#"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                        Community Event
+                                        Sports
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                        Open Discussion Event
+                                        Technology
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        Arts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        Bussiness
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        Health
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Card -->
                     <div class="bg-gray-800 rounded-lg shadow-md flex flex-col h-full">
-                        <img src="https://via.placeholder.com/400x200" alt="Category 1"
+                        <img src="../public/image/opdis/13.jpg" alt="Category 1" loading="lazy"
                             class="rounded-t-lg w-full h-36 object-cover" />
                         <div class="p-4 flex flex-col justify-between">
                             <div>
-                                <h3 class="text-lg font-semibold text-white">Diskusi Gunung</h3>
+                                <h3 class="text-lg font-semibold text-white">Komunitas Gunung</h3>
                                 <p class="text-gray-400 text-sm">26/05/2024</p>
                                 <p class="text-gray-500 text-xs mt-2">
                                     Please add your content here. Keep it short and simple. And smile :)
@@ -246,81 +347,32 @@
                 </div>
             </div>
 
-
-            <!-- Categories Section -->
-            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Category Card 1 -->
-                <div class="bg-gray-800 rounded-lg shadow-lg">
-                    <img src="https://via.placeholder.com/400x200" alt="Category 1"
-                        class="rounded-t-lg w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-white">Diskusi Gunung</h3>
-                        <p class="text-gray-400 text-sm mb-2">
-                            26/05/2024
-                        </p>
-                        <p class="text-gray-500 text-xs mb-4">
-                            Please add your content here. Keep it short and simple. And smile :)
-                        </p>
-                        <button class="bg-purple-700 text-white font-semibold px-4 py-2 rounded hover:bg-purple-800">
-                            Join
-                        </button>
+            <section id="cardContainer" class="hover: grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 card-grid">
+                <template id="cardTemplate">
+                    <div class="bg-gray-800 rounded-lg shadow-lg opacity-0 transition duration-300 cursor-pointer hover:scale-105" onclick="window.location.href='com_comInfo.html';">
+                        <div class="relative">
+                            <img src="" loading="lazy" alt="Category" class="rounded-t-lg w-full h-40 object-cover image-dis" />
+                            <img src="" alt="Logo" class="shadow-md shadow-black border-2 border-purple-600 logo-dis absolute top-2 left-2 w-10 h-10 rounded-full">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Komunitas <span class="category-name"></span></h3>
+                            <p class="text-gray-400 text-sm mb-2">
+                                <span class="discussion-date"></span>
+                            </p>
+                            <p class="text-gray-500 text-xs mb-4">
+                                Please add your content here. Keep it short and simple. And smile :)
+                            </p>
+                            <button class="bg-purple-700 text-white font-semibold px-4 py-2 rounded hover:bg-purple-800">
+                                Join
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Category Card 2 -->
-                <div class="bg-gray-800 rounded-lg shadow-lg">
-                    <img src="https://via.placeholder.com/400x200" alt="Category 2"
-                        class="rounded-t-lg w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-white">Diskusi Jalanan</h3>
-                        <p class="text-gray-400 text-sm mb-2">
-                            30/05/2024
-                        </p>
-                        <p class="text-gray-500 text-xs mb-4">
-                            Please add your content here. Keep it short and simple. And smile :)
-                        </p>
-                        <button class="bg-purple-700 text-white font-semibold px-4 py-2 rounded hover:bg-purple-800">
-                            Join
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Category Card 3 -->
-                <div class="bg-gray-800 rounded-lg shadow-lg">
-                    <img src="https://via.placeholder.com/400x200" alt="Category 3"
-                        class="rounded-t-lg w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-white">Diskusi Budaya</h3>
-                        <p class="text-gray-400 text-sm mb-2">
-                            01/06/2024
-                        </p>
-                        <p class="text-gray-500 text-xs mb-4">
-                            Please add your content here. Keep it short and simple. And smile :)
-                        </p>
-                        <button class="bg-purple-700 text-white font-semibold px-4 py-2 rounded hover:bg-purple-800">
-                            Join
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Category Card 4 -->
-                <div class="bg-gray-800 rounded-lg shadow-lg">
-                    <img src="https://via.placeholder.com/400x200" alt="Category 4"
-                        class="rounded-t-lg w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-white">Diskusi Arsitektur</h3>
-                        <p class="text-gray-400 text-sm mb-2">
-                            07/06/2024
-                        </p>
-                        <p class="text-gray-500 text-xs mb-4">
-                            Please add your content here. Keep it short and simple. And smile :)
-                        </p>
-                        <button class="bg-purple-700 text-white font-semibold px-4 py-2 rounded hover:bg-purple-800">
-                            Join
-                        </button>
-                    </div>
-                </div>
+                </template>
             </section>
+
+            <div id="loadingIndicator" class="hidden text-center py-4">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
+            </div>
         </main>
     </div>
 
@@ -339,6 +391,137 @@
                 userMenuDropdown.classList.add("hidden");
             }
         });
+
+        // Template data for community
+        const discussions = [
+            { name: 'Ganteng', date: '26/05/2024', image: '../public/image/com_cover/1.jpg', logo: '../public/image/com_logo/1.jpg' },
+            { name: 'IoT Hub', date: '28/05/2024', image: '../public/image/com_cover/2.jpg', logo: '../public/image/com_logo/IoT.png' },
+            { name: 'Tech', date: '30/05/2024', image: '../public/image/com_cover/3.jpg', logo: '../public/image/com_logo/Tech.png' },
+            { name: 'Dancer', date: '01/06/2024', image: '../public/image/com_cover/4.jpg', logo: '../public/image/com_logo/Dancer.png' },
+            { name: 'Arsitektur', date: '07/06/2024', image: '../public/image/com_cover/5.jpg', logo: '../public/image/com_logo/5.png' },
+            { name: 'Smart City', date: '10/06/2024', image: '../public/image/com_cover/6.jpg', logo: '../public/image/com_logo/6.png' },
+            { name: 'Seni', date: '15/06/2024', image: '../public/image/com_cover/7.jpg'  },
+            { name: 'Musik', date: '20/06/2024', image: '../public/image/com_cover/8.jpg'  },
+            { name: 'Film', date: '25/06/2024', image: '../public/image/com_cover/9.jpg'  },
+            { name: 'Kuliner', date: '30/06/2024', image: '../public/image/com_cover/10.jpg'  },
+            { name: 'Olahraga', date: '05/07/2024', image: '../public/image/com_cover/11.jpg'  },
+            { name: 'Literatur', date: '10/07/2024', image: '../public/image/com_cover/12.jpg'  },
+            { name: 'Fotografi', date: '15/07/2024', image: '../public/image/com_cover/13.jpg'  }
+        ];
+
+        const cardContainer = document.getElementById('cardContainer');
+        const cardTemplate = document.getElementById('cardTemplate');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        let currentIndex = 0;
+        let isLoading = false;
+
+        // Create intersection observer for lazy loading
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Function to add cards with lazy loading
+        function addCards(count) {
+            if (isLoading) return;
+            isLoading = true;
+            loadingIndicator.classList.remove('hidden');
+
+            // Use requestAnimationFrame for smoother rendering
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    const fragment = document.createDocumentFragment();
+                    
+                    for (let i = 0; i < count; i++) {
+                        if (currentIndex >= discussions.length) {
+                            currentIndex = 0;
+                        }
+                        const card = cardTemplate.content.cloneNode(true);
+                        const cardDiv = card.querySelector('div');
+                        
+                        card.querySelector('.category-name').textContent = discussions[currentIndex].name;
+                        card.querySelector('.discussion-date').textContent = discussions[currentIndex].date;
+                        card.querySelector('.image-dis').src = discussions[currentIndex].image;
+                        card.querySelector('.logo-dis').src = discussions[currentIndex].logo;
+                        
+                        fragment.appendChild(card);
+                        observer.observe(cardDiv);
+                        currentIndex++;
+                    }
+
+                    cardContainer.appendChild(fragment);
+                    isLoading = false;
+                    loadingIndicator.classList.add('hidden');
+                }, 500);
+            });
+        }
+
+        // Initial load
+        addCards(8);
+
+        // Infinite scroll with lazy loading
+        const scrollObserver = new IntersectionObserver((entries) => {
+            const lastEntry = entries[0];
+            if (lastEntry.isIntersecting && !isLoading) {
+                addCards(4);
+            }
+        }, {
+            rootMargin: '100px'
+        });
+
+        // Create and observe sentinel element
+        const sentinel = document.createElement('div');
+        sentinel.id = 'sentinel';
+        cardContainer.after(sentinel);
+        scrollObserver.observe(sentinel);
+
+        // Add lazy loading to all existing images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img:not([loading])');
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
+        });
+
+        // Add responsive handling for user menu
+        function adjustUserMenu() {
+            const dropdown = document.getElementById('userMenuDropdown');
+            if (window.innerWidth < 768) {
+                dropdown.classList.add('w-full', 'left-0');
+                dropdown.classList.remove('right-0');
+            } else {
+                dropdown.classList.remove('w-full', 'left-0');
+                dropdown.classList.add('right-0');
+            }
+        }
+
+        window.addEventListener('resize', adjustUserMenu);
+        window.addEventListener('load', adjustUserMenu);
+
+        // Function to handle sidebar position
+        function handleSidebarPosition() {
+            const sidebar = document.getElementById('dropdown-user');
+            const main = document.querySelector('main');
+            
+            if (window.innerWidth <= 640) {
+                sidebar.classList.remove('top-0', '-translate-x-full');
+                sidebar.classList.add('bottom-0', 'translate-x-0');
+                main.classList.add('mb-20');
+            } else {
+                sidebar.classList.add('top-0');
+                sidebar.classList.remove('bottom-0');
+                main.classList.remove('mb-20');
+            }
+        }
+
+        // Call on load and resize
+        window.addEventListener('load', handleSidebarPosition);
+        window.addEventListener('resize', handleSidebarPosition);
     </script>
 </body>
 
