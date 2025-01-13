@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seureka - Community</title>
+    <title>Seureka - Open Discussion</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
@@ -46,20 +46,20 @@
             <!-- Navigation Links -->
             <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
                 <ul
-                    class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
+                    class="flex flex-col justify-center md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
                     <li>
                         <a href="dashboard.html"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
-                            aria-current="page">Home</a>
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page"
+                            >Home</a>
                     </li>
                     <li>
                         <a href="opdis_1.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Open
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" >Open
                             Discussion</a>
                     </li>
                     <li>
                         <a href="com_1.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500 md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500  md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
                     </li>
                     <li>
                         <a href="lg_about.html"
@@ -70,7 +70,7 @@
                         <a href="lg_help.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Help</a>
                     </li>
-                    <div class="relative ml-4">
+                    <div class="relative ">
                         <button id="userMenuButton"
                             class="block w-10 h-10 rounded-full overflow-hidden border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <img src="image/profile.jpg" alt="User Photo" class="w-full h-full object-cover">
@@ -183,46 +183,35 @@
             <!-- Sidebar 2 content here -->
             <h1 class="font-bold text-xl">Discussion Chat Interaction</h1>
             <!-- search bar -->
-            <div class="mt-4 mb-2">
+            <div class="mt-4 mb-4">
                 <input type="text" placeholder="Search..."
                     class="w-full h-8 px-4 py-2 text-sm rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
-                <div class="flex items-center gap-2 ">
-                    <img src="image/opdis/Cafeshop-01.png" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
-                    <div>
-                        <p class="font-medium text-base ">komunitas Ganteng</p>
-                        <p class="text-xs text-gray-400">We head to help...</p>
+            <!-- Card 1 -->
+            <div
+                class="bg-gray-900 rounded-lg overflow-hidden mb-2 h-16 shadow-md flex border-2 border-gray-100/20 border-purple-700 event-card">
+                <!-- Wrapper gambar -->
+                <div class="relative w-full h-full event-image-wrapper">
+                    <div class="py-2 px-4 absolute inset-0  items-center justify-start z-50 mb-2">
+                        <h3 class="text-base font-semibold">First Meet</h3>
+                        <p class="text-xs font-normal">Today - 18.00</p>
                     </div>
+                    <img src="image/Event/2.jpg" alt="Background" class="w-full h-full object-cover">
+                    <div class="absolute right-0 top-0 bg-gradient-to-r from-gray-900 from-20% h-full w-full"></div>
                 </div>
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
-                <div class="flex items-center gap-2">
-                    <img src="image/opdis/King Froggy.jpg" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
-                    <div>
-                        <p class="font-medium text-base ">komunitas Ganteng</p>
-                        <p class="text-xs text-gray-400">We head to help...</p>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-gray-900 rounded-lg overflow-hidden mb-2 h-16 shadow-md flex border-2 border-gray-100/20 hover:border-purple-700 event-card">
+                <!-- Wrapper gambar -->
+                <div class="relative w-full h-full event-image-wrapper">
+                    <div class="py-2 px-4 absolute inset-0  items-center justify-start z-50 mb-2">
+                        <h3 class="text-base font-semibold">Break Dance Meet</h3>
+                        <p class="text-xs font-normal">10 December - 21.00</p>
                     </div>
-                </div>
-            </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
-                <div class="flex items-center gap-2 ">
-                    <img src="image/opdis/Little Minu-01.png" alt="User Photo"
-                        class="w-12 h-12 object-cover rounded-full">
-                    <div>
-                        <p class="font-medium text-base ">komunitas Ganteng</p>
-                        <p class="text-xs text-gray-400">We head to help...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
-                <div class="flex items-center gap-2 ">
-                    <img src="image/opdis/Milkyways Logo-01.jpg" alt="User Photo"
-                        class="w-12 h-12 object-cover rounded-full">
-                    <div>
-                        <p class="font-medium text-base ">komunitas Ganteng</p>
-                        <p class="text-xs text-gray-400">We head to help...</p>
-                    </div>
+                    <img src="image/Event/5.jpg" alt="Background" class="w-full h-full object-cover">
+                    <div class="absolute right-0 top-0 bg-gradient-to-r from-gray-900 from-20% h-full w-full"></div>
                 </div>
             </div>
         </div>
@@ -230,19 +219,55 @@
 
 
     <div class="flex ml-[368px]">
-        <div class="flex-1 min-h-screen bg-gray-950 px-12 py-8">
+        <div class="flex-1 bg-gray-950 px-12 py-8">
             <main>
-                <!-- Judul event -->
-                <h1 class="text-3xl font-bold">Community Event 1</h1>
-                <div class="mt-6 flex gap-6 mb-12">
-                    <!-- Deskripsi (sisi kiri) -->
+                <div class="flex gap-6 min-h-[440px] mb-12">
+                    <!-- Sisi kiri -->
                     <div class="w-3/4 relative h-full ">
+                        <!-- Breadcrumb -->
+                        <nav class="text-white text-sm mb-1" aria-label="Breadcrumb">
+                            <ol class="list-none p-0 inline-flex">
+                                <li class="flex items-center">
+                                    <a href="com_1.html" class="hover:text-purple-500 ">Community</a>
+                                    <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 320 512">
+                                        <path
+                                            d="M285.476 272.971L91.476 466.971c-9.373 9.373-24.569 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L196.901 256 34.908 94.598c-9.373-9.373-9.373-24.569 0-33.941l22.627-22.627c9.373-9.373 24.569-9.373 33.941 0l194 194c9.373 9.373 9.373 24.569 0 33.941z" />
+                                    </svg>
+                                </li>
+                                <li class="flex items-center">
+                                    <a href="com_3.html" class="hover:text-purple-500 ">Community Info</a>
+                                    <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 320 512">
+                                        <path
+                                            d="M285.476 272.971L91.476 466.971c-9.373 9.373-24.569 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L196.901 256 34.908 94.598c-9.373-9.373-9.373-24.569 0-33.941l22.627-22.627c9.373-9.373 24.569-9.373 33.941 0l194 194c9.373 9.373 9.373 24.569 0 33.941z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span class="text-gray-400">First Meet</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <!-- Description -->
+                        <h1 class="text-2xl font-bold mb-2">Description</h1>
                         <p class="text-sm font-normal text-justify">Welcome to the "Development of Youth Resources"
                             discussion forum at Telkom University! This forum is dedicated to fostering a collaborative
                             environment where students, faculty, and community members can come together to share ideas,
                             strategies, and initiatives aimed at empowering and developing the youth resources on our
-                            campus.
+                            campus.</p>
+
+                        <!-- Location -->
+                        <h1 class="text-2xl font-bold mt-8 mb-2">Location</h1>
+                        <p class="text-sm font-normal text-justify mb-4">Jl. Telekomunikasi. 1, Terusan Buahbatu -
+                            Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat
+                            40257
                         </p>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.991322344252!2d107.63457457602236!3d-6.971149370120249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68f7777aaed%3A0xa5b3ed2fa4d4020!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1686582222331!5m2!1sen!2sid"
+                            class="w-full h-48 rounded-lg shadow-md shadow-purple-700" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
 
                     <!-- Sisi kanan -->
@@ -268,25 +293,90 @@
                                 </svg>
                                 <div>
                                     <p class="font-bold text-sm">Time</p>
-                                    <p class="font-base text-xs">09.00 - 12.00</p>
+                                    <p class="font-base text-xs">21.00 - 22.00</p>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="border border-gray-700 rounded-lg w-full min-h-50 bg-gray-950 mt-4">
+                            <div class="px-4 py-4">
+                                <div class="flex justify-between align-middle text-center">
+                                    <h1 class="text-xl font-bold ">Member</h1>
+                                    <div class="flex align-middle gap-1">
+                                        <p class="font-medium text-base text-gray-600">4</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                            width="24px" fill="#4b5563  ">
+                                            <path
+                                                d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Member card list -->
+                                <div class="mt-2 gap-1">
+                                    <div
+                                        class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
+                                        <img class="w-8 h-8 rounded-full" src="image/people/pep1.png" />
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Haifa Aulia
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mb-2  self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
+                                        <img class="w-8 h-8 rounded-full" src="image/people/pep2.png" />
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Angky Asti
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
+                                        <img class="w-8 h-8 rounded-full" src="image/people/pep3.png" />
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Fasya Sau...
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
+                                        <img class="w-8 h-8 rounded-full" src="image/people/pep4.png" />
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Ratu Wiya...
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="self-stretch p-2 bg-gray-800 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
+                                        <div class="grow shrink basis-0 text-white text-sm font-normal text-center">See
+                                            more
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-700 rounded-lg w-full min-h-50 bg-gray-950 mt-4 px-4 py-4">
+                            <p class="font-bold text-lg text-center">Invite Member</p>
+                            <div class="mt-2">
+                                <input type="text"
+                                    class="w-full h-8 px-2 py-2 text-xs rounded-md bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    placeholder="Username..." />
+                            </div>
+                            <!-- Button invite member -->
+                            <div class="mt-2">
+                                <button
+                                    class="w-full px-2 py-1 bg-white hover:bg-gray-300 text-black text-sm font-semibold rounded-md">
+                                    <div class="flex gap-1 items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                                            width="20px" fill="#000000">
+                                            <path
+                                                d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z" />
+                                        </svg>
+                                        Invite
+                                    </div>
+
+                                </button>
+                            </div>
+                        </div>
+
+                        <a href="login.html"
+                            class="bg-white text-black font-semibold duration-500 px-6 py-3 hover:bg-gradient-to-b from-white to-purple-300 rounded-lg mt-4 text-center">
+                            End Discussion
+                        </a>
                     </div>
-                </div>
-
-                <div class="w-full">
-                    <h1 class="font-bold text-xl mb-2">Event Location</h1>
-                    <p class="text-sm font-normal text-justify mb-4">Jl. Telekomunikasi. 1, Terusan Buahbatu -
-                        Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat
-                        40257
-                    </p>
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.991322344252!2d107.63457457602236!3d-6.971149370120249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68f7777aaed%3A0xa5b3ed2fa4d4020!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1686582222331!5m2!1sen!2sid"
-                        class="w-full h-48 rounded-lg shadow-md shadow-purple-700" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
                 </div>
             </main>
         </div>

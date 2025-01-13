@@ -27,11 +27,11 @@
 
 <body class="bg-gradient-to-br from-purple-950 from-10% via-black via-80% to-purple-950">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <nav class="px-16 backdrop-filter sticky top-0 backdrop-blur-md bg-black bg-opacity-40 z-50">
+    <nav class="px-4 md:px-16 backdrop-filter sticky top-0 backdrop-blur-md bg-black bg-opacity-40">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
             <button onclick="scrollToSection('hero')" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="favicon.ico" class="h-10" alt="Seureka Logo" />
+                <img src="favicon.ico" class="h-8 md:h-10" alt="Seureka Logo" />
             </button>
 
             <!-- Hamburger Button -->
@@ -49,19 +49,19 @@
             <!-- Navigation Links -->
             <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
                 <ul
-                    class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
+                    class="flex flex-col justify-center md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
                     <li>
                         <a href="dashboard.html"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
-                            aria-current="page">Home</a>
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page"
+                            >Home</a>
                     </li>
                     <li>
                         <a href="opdis_1.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Open
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" >Open
                             Discussion</a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="com_1.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
                     </li>
                     <li>
@@ -70,10 +70,10 @@
                             Us</a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="lg_help.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500 md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Help</a>
                     </li>
-                    <div class="relative ml-4">
+                    <div class="relative ">
                         <button id="userMenuButton"
                             class="block w-10 h-10 rounded-full overflow-hidden border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <img src="image/profile.jpg" alt="User Photo" class="w-full h-full object-cover">
@@ -95,12 +95,12 @@
         <h1>Frequently Ask Question (FAQ)</h1>
     </div>
 
-    <div class="px-16">
+    <div class="px-20">
         <div id="accordion-flush" data-accordion="collapse"
             data-active-classes="bg-black dark:bg-gray-950 dark:bg-opacity-40 text-gray-200 dark:text-white"
             data-inactive-classes="text-gray-200 dark:text-gray-200">
             <!-- FAQ 1 -->
-            <div class="mb-4 bg-gray-950 bg-opacity-50 rounded-lg shadow-lg border border-white border-opacity-10">
+            <div class="mb-4 bg-gray-950 bg-opacity-70 rounded-lg shadow-lg border border-white border-opacity-10">
                 <h2 id="accordion-flush-heading-1">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-gray-300 gap-3"
@@ -116,13 +116,14 @@
                 </h2>
                 <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
                     <div class="py-5 px-5 text-gray-300">
-                        <p class="mb-2">To create a new community on Seureka, go to the "Community" section and click on the "Create Community" button. Fill in the required details and submit the form.</p>
+                        <p class="mb-2">To create a new community on Seureka, go to the "Community" section and click on
+                            the "Create Community" button. Fill in the required details and submit the form.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 2 -->
-            <div class="mb-4 bg-gray-950 bg-opacity-50 rounded-lg shadow-lg border border-white border-opacity-10">
+            <div class="mb-4 bg-gray-950 bg-opacity-70 rounded-lg shadow-lg border border-white border-opacity-10">
                 <h2 id="accordion-flush-heading-2">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-gray-300 gap-3"
@@ -138,13 +139,14 @@
                 </h2>
                 <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
                     <div class="py-5 px-5 text-gray-300">
-                        <p class="mb-2">Yes, you can join multiple communities and participate in various discussions. Simply navigate to the community or discussion you are interested in and click "Join".</p>
+                        <p class="mb-2">Yes, you can join multiple communities and participate in various discussions.
+                            Simply navigate to the community or discussion you are interested in and click "Join".</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 3 -->
-            <div class="mb-4 bg-gray-950 bg-opacity-50 rounded-lg shadow-lg border border-white border-opacity-10">
+            <div class="mb-4 bg-gray-950 bg-opacity-70 rounded-lg shadow-lg border border-white border-opacity-10">
                 <h2 id="accordion-flush-heading-3">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-gray-300 gap-3"
@@ -160,13 +162,15 @@
                 </h2>
                 <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
                     <div class="py-5 px-5 text-gray-300">
-                        <p class="mb-2">To filter discussions by category, go to the "Discussions" section and use the filter options available on the sidebar. Select the categories you are interested in to view relevant discussions.</p>
+                        <p class="mb-2">To filter discussions by category, go to the "Discussions" section and use the
+                            filter options available on the sidebar. Select the categories you are interested in to view
+                            relevant discussions.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 4 -->
-            <div class="mb-4 bg-gray-950 bg-opacity-50 rounded-lg shadow-lg border border-white border-opacity-10">
+            <div class="mb-4 bg-gray-950 bg-opacity-70 rounded-lg shadow-lg border border-white border-opacity-10">
                 <h2 id="accordion-flush-heading-4">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-gray-300 gap-3"
@@ -182,13 +186,15 @@
                 </h2>
                 <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
                     <div class="py-5 px-5 text-gray-300">
-                        <p class="mb-2">To report inappropriate content, click on the "Report" button located next to the content. Provide a brief explanation of why you are reporting the content and submit the report.</p>
+                        <p class="mb-2">To report inappropriate content, click on the "Report" button located next to
+                            the content. Provide a brief explanation of why you are reporting the content and submit the
+                            report.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 5 -->
-            <div class="mb-4 bg-gray-950 bg-opacity-50 rounded-lg shadow-lg border border-white border-opacity-10">
+            <div class="mb-4 bg-gray-950 bg-opacity-70 rounded-lg shadow-lg border border-white border-opacity-10">
                 <h2 id="accordion-flush-heading-5">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-gray-300 gap-3"
@@ -213,8 +219,8 @@
     </div>
 
     <!-- Contact Us -->
-    <div
-        class="my-16 mx-16 bg-gray-950 bg-opacity-30 p-8 rounded-lg shadow-lg border border-white border-opacity-20 shadow-black">
+    <div id="contact"
+        class="my-20 mx-20 bg-gray-950 bg-opacity-30 p-8 rounded-lg shadow-lg border border-white border-opacity-20 shadow-black">
         <h2 class="text-3xl font-bold text-white mb-6 text-center">Contact Us</h2>
         <form class="space-y-6">
             <div>
@@ -261,6 +267,13 @@
     </div>
     </div>
 
+    <!-- Scroll to Contact Button -->
+    <button onclick="scrollToContact()"
+        class="fixed bottom-8 right-3 bg-purple-700 hover:bg-purple-800 text-white px-4 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2"
+        aria-label="Scroll to contact section">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#ffffff"><path d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+    </button>
+
     <!-- Footer Section -->
     <footer class="footer bg-black px-15 py-4">
         <div class="flex w-full flex-wrap items-center justify-between">
@@ -294,6 +307,17 @@
     </footer>
 
     <script>
+        // Scroll to Contact functionality
+        function scrollToContact() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionContent = button.nextElementSibling;

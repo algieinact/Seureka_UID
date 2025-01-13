@@ -1,80 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seureka - Community</title>
+    <title>Seureka - Community Settings</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Montserrat';
-        }
-
-        .sticky {
-            z-index: 9999;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 1024px) {
-            main {
-                padding: 36px !important;
-            }
-
-            .map-section {
-                flex-direction: column;
-                height: auto !important;
-            }
-
-            .map-container {
-                width: 100% !important;
-                height: 300px !important;
-                margin-bottom: 1rem;
-            }
-
-            .side-content {
-                width: 100% !important;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .map-section {
-                margin-bottom: 1rem !important;
-            }
-
-            #dropdown-user {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-                transform: none;
-                padding: 0.5rem;
-                border-top: 1px solid rgb(107, 33, 168);
-                border-right: none;
-                background-color: rgba(17, 24, 39, 0.95);
-                backdrop-filter: blur(8px);
-                z-index: 50;
-            }
-
-            #dropdown-user .flex-col {
-                flex-direction: row;
-                justify-content: space-around;
-                padding: 0;
-            }
-
-            main {
-                margin-left: 0 !important;
-                padding-bottom: 5rem !important;
-            }
-        }
+        body { font-family: 'Montserrat'; }
+        .sticky { z-index: 50; }
     </style>
 </head>
-
 <body class="bg-gray-950 text-white">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <!-- Header Section -->
@@ -142,13 +81,14 @@
         </div>
     </nav>
 
-    <div id="dropdown-user" class="w-20 border-e bg-gray-950  dark:border-purple-700 dark:bg-gray-950 fixed top-0 left-0 z-40 h-screen pt-20 transition-transform -translate-x-full  border-r
+    <!-- SIdebar1 -->
+    <div id="dropdown-user" class="w-20 border-e bg-gray-950  dark:border-purple-700 dark:bg-gray-950 fixed top-0 left-0 z-20 h-screen pt-20 transition-transform -translate-x-full  border-r
     border-gray-200 sm:translate-x-0 ">
         <!-- Content of Sidebar 1 -->
         <div class="flex flex-col justify-center items-center gap-y-4 py-4">
             <div class="hs-tooltip [--placement:right] inline-block">
                 <button type="button" onclick="location.href='com_1.html';"
-                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500  focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 bg-purple-800">
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500  focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 ">
                     <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
                         fill="#ffffff">
                         <path
@@ -180,7 +120,7 @@
 
             <div class="hs-tooltip [--placement:right] inline-block">
                 <button type="button" onclick="location.href='com_3.html';"
-                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800">
+                    class="hs-tooltip-toggle size-[44px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-purple-800 bg-purple-800">
                     <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
                         fill="#ffffff">
                         <path
@@ -228,170 +168,168 @@
         </div>
     </div>
 
-    <div id="hero" class="min-w-fit ml-0 sm:ml-20 h-40 md:h-56 bg-cover bg-center object-bottom grid items-center place-items-start"
-        style="background-image: url('image/com_cover/3.jpg'); position: relative;">
-        <!-- Overlay -->
-        <div class="hero-overlay h-full w-full bg-gradient-to-r from-black bg-opacity-50 absolute top-0 left-0 z-0">
-        </div>
-        
-        <!-- Content -->
-        <div class="relative px-10 md:px-20 flex flex-row items-center space-x-4 z-10">
-            <!-- Logo -->
-            <img src="image/com_logo/1.jpg" alt="Komunitas Ganteng Logo" class="rounded-full h-12 w-12 md:h-16 md:w-16">
-            <!-- Teks -->
-            <div>
-                <!-- Breadcrumb -->
-                <nav class="text-white text-xs md:text-sm mb-1" aria-label="Breadcrumb">
-                    <ol class="list-none p-0 inline-flex">
-                        <li class="flex items-center">
-                            <a href="dashboard.html" class="hover:text-purple-500 ">Home</a>
-                            <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path d="M285.476 272.971L91.476 466.971c-9.373 9.373-24.569 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L196.901 256 34.908 94.598c-9.373-9.373-9.373-24.569 0-33.941l22.627-22.627c9.373-9.373 24.569-9.373 33.941 0l194 194c9.373 9.373 9.373 24.569 0 33.941z"/>
-                            </svg>
-                        </li>
-                        <li class="flex items-center">
-                            <a href="com_1.html" class="hover:text-purple-500 ">Community</a>
-                            <svg class="fill-current w-3 h-3 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path d="M285.476 272.971L91.476 466.971c-9.373 9.373-24.569 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L196.901 256 34.908 94.598c-9.373-9.373-9.373-24.569 0-33.941l22.627-22.627c9.373-9.373 24.569-9.373 33.941 0l194 194c9.373 9.373 9.373 24.569 0 33.941z"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <span class="text-gray-400">Komunitas Ganteng</span>
-                        </li>
-                    </ol>
-                </nav>
-                <h1 class="text-2xl md:text-4xl font-bold text-white">Komunitas Ganteng</h1>
-                <div class="flex items-center gap-1 opacity-70">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
-                        fill="#ffffff">
-                        <path
-                            d="M480-440q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0-80q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0 440q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-400Zm0-315-240 90v189q0 54 15 105t41 96q42-21 88-33t96-12q50 0 96 12t88 33q26-45 41-96t15-105v-189l-240-90Zm0 515q-36 0-70 8t-65 22q29 30 63 52t72 34q38-12 72-34t63-52q-31-14-65-22t-70-8Z" />
-                    </svg>
-                    <p class="text-sm font-normal text-white text-center">Algie Swargani</p>
+    <!-- Sidebar 2 -->
+    <div id="sidebar2"
+        class="w-72 bg-gray-900 dark:border-purple-700 fixed top-0 left-20 z-20 h-screen pt-20 transition-transform -translate-x-full border-gray-200 sm:translate-x-0">
+        <!-- Content of Sidebar 2 -->
+        <div class="flex flex-col py-4 px-4">
+            <!-- Sidebar 2 content here -->
+            <h1 class="font-bold text-xl">Community Interaction</h1>
+            <!-- search bar -->
+            <div class="mt-4 mb-2">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-8 px-4 py-2 text-sm rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
+                <div class="flex items-center gap-2 ">
+                    <img src="image/opdis/Cafeshop-01.png" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
+                    <div>
+                        <p class="font-medium text-base ">komunitas Ganteng</p>
+                        <p class="text-xs text-gray-400">We head to help...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-1 py-2 border-r-4 border-purple-700">
+                <div class="flex items-center gap-2">
+                    <img src="image/opdis/King Froggy.jpg" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
+                    <div>
+                        <p class="font-medium text-base ">komunitas Ganteng</p>
+                        <p class="text-xs text-gray-400">Welcome to the "Dev...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
+                <div class="flex items-center gap-2 ">
+                    <img src="image/opdis/Little Minu-01.png" alt="User Photo"
+                        class="w-12 h-12 object-cover rounded-full">
+                    <div>
+                        <p class="font-medium text-base ">komunitas Ganteng</p>
+                        <p class="text-xs text-gray-400">We head to help...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
+                <div class="flex items-center gap-2 ">
+                    <img src="image/opdis/Milkyways Logo-01.jpg" alt="User Photo"
+                        class="w-12 h-12 object-cover rounded-full">
+                    <div>
+                        <p class="font-medium text-base ">komunitas Ganteng</p>
+                        <p class="text-xs text-gray-400">We head to help...</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main content -->
-    <div class="flex flex-col sm:flex-row sm:ml-20">
-        <!-- Main Content -->
-        <main class="flex-1 bg-gradient-to-br from-gray-900 from-70% to-purple-950 px-4 md:px-20 py-8 md:py-12">
-            <div class="flex flex-col md:flex-row gap-8 mb-12">
-                <!-- Sisi kiri -->
-                <div class="w-full md:w-3/4 relative">
-                    <!-- Description -->
-                    <h1 class="text-xl md:text-2xl font-bold mb-2">Description</h1>
-                    <p class="text-sm font-normal text-justify">Welcome to the "Development of Youth Resources"
-                        discussion forum at Telkom University! This forum is dedicated to fostering a collaborative
-                        environment where students, faculty, and community members can come together to share ideas,
-                        strategies, and initiatives aimed at empowering and developing the youth resources on our
-                        campus.</p>
+    <!-- Main Content -->
+    <div class="ml-[368px]">
+        <!-- Hero Section with Back Button -->
+        <div class="bg-gray-900 px-12 py-6 flex items-center gap-4">
+            <button onclick="history.back()" class="hover:text-purple-500">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+            </button>
+            <h1 class="text-2xl font-bold">Community Settings</h1>
+        </div>
 
-                    <!-- Location -->
-                    <h1 class="text-xl md:text-2xl font-bold mt-6 md:mt-8 mb-2">Location</h1>
-                    <p class="text-sm font-normal text-justify mb-4">Jl. Telekomunikasi. 1, Terusan Buahbatu -
-                        Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257
-                    </p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.991322344252!2d107.63457457602236!3d-6.971149370120249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e68f7777aaed%3A0xa5b3ed2fa4d4020!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1686582222331!5m2!1sen!2sid"
-                        class="w-full h-40 md:h-48 rounded-lg shadow-md shadow-purple-700" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <!-- Sisi kanan -->
-                <div class="w-full md:w-1/4 flex flex-col mt-6 md:mt-0">
-                    <div class="border border-gray-700 rounded-lg w-full min-h-40 bg-gray-950">
-                        <div class="px-4 py-4">
-                            <div class="flex justify-between align-middle text-center">
-                                <h1 class="text-lg md:text-xl font-bold">Member</h1>
-                                <div class="flex align-middle gap-1">
-                                    <p class="font-medium text-base text-gray-600">4</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px" fill="#4b5563  ">
-                                        <path
-                                            d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Member card list -->
-                            <div class="mt-2 gap-1">
-                                <div
-                                    class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
-                                    <img class="w-8 h-8 rounded-full" src="image/people/pep1.png" />
-                                    <div class="grow shrink basis-0 text-white text-base font-medium ">Haifa Aulia</div>
-                                </div>
-                                <div
-                                    class="mb-2  self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
-                                    <img class="w-8 h-8 rounded-full" src="image/people/pep2.png" />
-                                    <div class="grow shrink basis-0 text-white text-base font-medium ">Angky Asti</div>
-                                </div>
-                                <div
-                                    class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
-                                    <img class="w-8 h-8 rounded-full" src="image/people/pep3.png" />
-                                    <div class="grow shrink basis-0 text-white text-base font-medium ">IoT
-                                        Hub</div>
-                                </div>
-                                <div
-                                    class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
-                                    <img class="w-8 h-8 rounded-full" src="image/people/pep4.png" />
-                                    <div class="grow shrink basis-0 text-white text-base font-medium ">IoT
-                                        Hub</div>
-                                </div>
-                                <div
-                                    class="self-stretch p-2 bg-gray-800 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
-                                    <div class="grow shrink basis-0 text-white text-sm font-normal text-center">See more
-                                    </div>
-                                </div>
+        <!-- Settings Content -->
+        <div class="px-12 py-8">
+            <!-- Community Profile Section -->
+            <div class="bg-gray-900 rounded-lg p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-6">Community Profile</h2>
+                <div class="flex gap-8 justify-between">
+                    <!-- Cover Image -->
+                    <div class="w-3/4">
+                        <label class="block text-sm font-medium mb-2">Cover Image</label>
+                        <div class="relative h-36 w-full bg-gray-800 rounded-lg overflow-hidden">
+                            <img src="image/com_cover/3.jpg" alt="Cover" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg">Change Cover</button>
                             </div>
                         </div>
                     </div>
-                    <a href="login.html"
-                        class="bg-white text-black font-semibold duration-500 px-6 py-3 hover:bg-gradient-to-b from-white to-purple-300 rounded-lg mt-2 text-center">
-                        Join
-                    </a>
+                    <!-- Profile Image -->
+                    <div class="w-1/4 flex  flex-col items-center">
+                        <label class="block text-sm font-medium mb-2">Profile Image</label>
+                        <div class="relative w-32 h-32">
+                            <img src="image/com_logo/1.jpg" alt="Profile" class="w-full h-full object-cover rounded-full">
+                            <button class="absolute bottom-0 right-0 bg-purple-600 p-2 rounded-full hover:bg-purple-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </main>
+
+            <!-- Basic Information -->
+            <div class="bg-gray-900 rounded-lg p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-6">Basic Information</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Community Name</label>
+                        <input type="text" value="Komunitas Ganteng" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Description</label>
+                        <textarea rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">Welcome to the "Development of Youth Resources" discussion forum at Telkom University! This forum is dedicated to fostering a collaborative environment...</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Location</label>
+                        <input type="text" value="Telkom University" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="bg-gray-900 rounded-lg p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-6">Privacy Settings</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-medium">Community Visibility</h3>
+                            <p class="text-sm text-gray-400">Control who can see your community</p>
+                        </div>
+                        <select class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2">
+                            <option>Public</option>
+                            <option>Private</option>
+                            <option>Hidden</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-medium">Join Requests</h3>
+                            <p class="text-sm text-gray-400">Manage how people can join your community</p>
+                        </div>
+                        <select class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2">
+                            <option>Open</option>
+                            <option>Approval Required</option>
+                            <option>Invite Only</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-end gap-4">
+                <button onclick="history.back()" class="px-6 py-2 border border-gray-600 rounded-lg hover:bg-gray-800">
+                    Cancel
+                </button>
+                <button onclick="saveSettings()" class="px-6 py-2 bg-purple-600 rounded-lg hover:bg-purple-700">
+                    Save Changes
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
-        const userMenuButton = document.getElementById("userMenuButton");
-        const userMenuDropdown = document.getElementById("userMenuDropdown");
-
-        userMenuButton.addEventListener("click", (event) => {
-            event.stopPropagation(); // Prevent the click from propagating
-            userMenuDropdown.classList.toggle("hidden");
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!userMenuButton.contains(event.target) && !userMenuDropdown.contains(event.target)) {
-                userMenuDropdown.classList.add("hidden");
-            }
-        });
-
-        // Add sidebar position handling
-        function handleSidebarPosition() {
-            const sidebar = document.getElementById('dropdown-user');
-            const main = document.querySelector('main');
-            
-            if (window.innerWidth <= 640) {
-                sidebar.classList.remove('top-0', '-translate-x-full');
-                sidebar.classList.add('bottom-0', 'translate-x-0');
-                main.classList.add('mb-20');
-            } else {
-                sidebar.classList.add('top-0');
-                sidebar.classList.remove('bottom-0');
-                main.classList.remove('mb-20');
-            }
+        function saveSettings() {
+            // Add save functionality here
+            alert('Settings saved!');
+            history.back();
         }
-
-        // Call on load and resize
-        window.addEventListener('load', handleSidebarPosition);
-        window.addEventListener('resize', handleSidebarPosition);
     </script>
 </body>
-
 </html>

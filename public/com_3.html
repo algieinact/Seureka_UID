@@ -16,8 +16,9 @@
         }
 
         .sticky {
-            z-index: 9999;
+            z-index: 50;
         }
+
     </style>
 </head>
 
@@ -46,20 +47,20 @@
             <!-- Navigation Links -->
             <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
                 <ul
-                    class="flex flex-col md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
+                    class="flex flex-col justify-center md:flex-row md:space-x-6 font-medium items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:mt-0 md:border-0">
                     <li>
                         <a href="dashboard.html"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-purple-500 md:text-purple-700 md:p-0 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent"
-                            aria-current="page">Home</a>
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page"
+                            >Home</a>
                     </li>
                     <li>
                         <a href="opdis_1.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Open
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent" >Open
                             Discussion</a>
                     </li>
                     <li>
                         <a href="com_1.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500 md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-purple-500  md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
                     </li>
                     <li>
                         <a href="lg_about.html"
@@ -70,7 +71,7 @@
                         <a href="lg_help.html"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-purple-700 dark:hover:text-white md:dark:hover:bg-transparent">Help</a>
                     </li>
-                    <div class="relative ml-4">
+                    <div class="relative ">
                         <button id="userMenuButton"
                             class="block w-10 h-10 rounded-full overflow-hidden border-2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <img src="image/profile.jpg" alt="User Photo" class="w-full h-full object-cover">
@@ -89,7 +90,7 @@
     </nav>
 
     <!-- SIdebar1 -->
-    <div id="dropdown-user" class="w-20 border-e bg-gray-950  dark:border-purple-700 dark:bg-gray-950 fixed top-0 left-0 z-40 h-screen pt-20 transition-transform -translate-x-full  border-r
+    <div id="dropdown-user" class="w-20 border-e bg-gray-950  dark:border-purple-700 dark:bg-gray-950 fixed top-0 left-0 z-20 h-screen pt-20 transition-transform -translate-x-full  border-r
     border-gray-200 sm:translate-x-0 ">
         <!-- Content of Sidebar 1 -->
         <div class="flex flex-col justify-center items-center gap-y-4 py-4">
@@ -177,17 +178,17 @@
 
     <!-- Sidebar 2 -->
     <div id="sidebar2"
-        class="w-72 bg-gray-900 dark:border-purple-700 fixed top-0 left-20 z-40 h-screen pt-20 transition-transform -translate-x-full border-gray-200 sm:translate-x-0">
+        class="w-72 bg-gray-900 dark:border-purple-700 fixed top-0 left-20 z-20 h-screen pt-20 transition-transform -translate-x-full border-gray-200 sm:translate-x-0">
         <!-- Content of Sidebar 2 -->
         <div class="flex flex-col py-4 px-4">
             <!-- Sidebar 2 content here -->
-            <h1 class="font-bold text-xl">Discussion Chat Interaction</h1>
+            <h1 class="font-bold text-xl">Community Interaction</h1>
             <!-- search bar -->
             <div class="mt-4 mb-2">
                 <input type="text" placeholder="Search..."
                     class="w-full h-8 px-4 py-2 text-sm rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
                 <div class="flex items-center gap-2 ">
                     <img src="image/opdis/Cafeshop-01.png" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
                     <div>
@@ -196,16 +197,16 @@
                     </div>
                 </div>
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
+            <div class="px-1 py-2 border-r-4 border-purple-700">
                 <div class="flex items-center gap-2">
                     <img src="image/opdis/King Froggy.jpg" alt="User Photo" class="w-12 h-12 object-cover rounded-full">
                     <div>
                         <p class="font-medium text-base ">komunitas Ganteng</p>
-                        <p class="text-xs text-gray-400">We head to help...</p>
+                        <p class="text-xs text-gray-400">Welcome to the "Dev...</p>
                     </div>
                 </div>
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
                 <div class="flex items-center gap-2 ">
                     <img src="image/opdis/Little Minu-01.png" alt="User Photo"
                         class="w-12 h-12 object-cover rounded-full">
@@ -215,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="px-1 py-2 hover:bg-gray-800">
+            <div class="px-1 py-2 hover:border-r-4 border-purple-700">
                 <div class="flex items-center gap-2 ">
                     <img src="image/opdis/Milkyways Logo-01.jpg" alt="User Photo"
                         class="w-12 h-12 object-cover rounded-full">
@@ -228,9 +229,46 @@
         </div>
     </div>
 
+    <div id="hero"
+        class=" min-w-fit ml-[368px] h-48 bg-cover bg-center object-bottom grid items-center place-items-start"
+        style="background-image: url('image/com_cover/3.jpg'); position: relative;">
+        <!-- Overlay -->
+        <div class="hero-overlay h-full w-full bg-gradient-to-t from-gray-950 bg-opacity-50 absolute top-0 left-0 z-0">
+        </div>
+        <!-- Content -->
+        <div class="relative px-12 flex flex-row items-center space-x-4 z-10">
+            <!-- Logo -->
+            <img src="image/com_logo/1.jpg" alt="Komunitas Ganteng Logo" class="rounded-full h-16 w-16">
+            <!-- Teks -->
+            <div>
+                <div class="flex flex-row justify-center items-center">
+                    <h1 class="text-4xl font-bold text-white">Komunitas Ganteng</h1>
+                    <!-- Settings Button -->
+                    <button
+                        class="text-white font-bold py-2 px-2 rounded"></button>
+                        <svg onclick="location.href='com_settings.html';" class="hover:fill-purple-700" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                            <path
+                                d="M440-120v-240h80v80h320v80H520v80h-80Zm-320-80v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80Zm-480-80v-80h400v80H120Z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-1 opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                        fill="#ffffff">
+                        <path
+                            d="M480-440q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0-80q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0 440q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-400Zm0-315-240 90v189q0 54 15 105t41 96q42-21 88-33t96-12q50 0 96 12t88 33q26-45 41-96t15-105v-189l-240-90Zm0 515q-36 0-70 8t-65 22q29 30 63 52t72 34q38-12 72-34t63-52q-31-14-65-22t-70-8Z" />
+                    </svg>
+                    <p class="text-sm font-normal text-white text-center">Algie Swargani</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="flex ml-[368px]">
         <div class="flex-1 bg-gray-950 px-12 py-8">
+
             <main>
                 <div class="flex gap-6 min-h-[440px] mb-12">
                     <!-- Sisi kiri -->
@@ -260,46 +298,65 @@
                         <!-- Community Event -->
                         <h1 class="text-2xl font-bold mt-8 mb-2">Community Event</h1>
                         <div class="w-full bg-gray-900 rounded-md min-h-40 p-6">
-                            <!-- Card community event -->
-                            <div
-                                class="mb-2 flex justify-between w-full bg-gray-950 hover:border-purple-700 hover:border-2 border border-gray-700 rounded-md p-4">
-                                <div class="">
-                                    <h1 class="text-lg font-bold">Community Event 1</h1>
-                                    <p class="text-sm font-light">Jl. Sindangsari, Bandung
-                                    <p>
+                            <h1 class="text-lg font-semibold mb-2">Today</h1>
+                            <!-- Event 1 -->
+                            <div onclick="location.href='com_3_eventInfo.html';"
+                                class="bg-gray-950 rounded-lg overflow-hidden mb-4 h-32 shadow-md flex border border-gray-100/20 hover:scale-105 event-card">
+                                <!-- Wrapper gambar -->
+                                <div class="relative w-1/2 h-full event-image-wrapper">
+                                    <img src="image/Event/2.jpg" alt="Background" class="w-full h-full object-cover">
+
+                                    <div class="absolute right-0 top-0 bg-gradient-to-l from-gray-950 h-full w-1/2 ">
+                                    </div>
                                 </div>
-                                <div class="justify-items-end">
-                                    <h1 class="text-xs font-light items-end">25/12/2024</h1>
-                                    <p class="text-xs font-light">09.00
-                                    <p>
+                                <!-- Konten -->
+                                <div class="p-2 pr-4 flex-1 event-content flex flex-col justify-center">
+                                    <h3 class="text-lg font-bold mb-2">First Meet</h3>
+                                    <p class="text-gray-400 text-xs mb-2 text-justify">
+                                        Welcome to the "Development of Youth Resources" discussion forum...
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p class="text-gray-500 text-xs">21.00 WIB</p>
+                                        <div class="flex gap-1 items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="16px"
+                                                viewBox="0 -960 960 960" width="16px" fill="#6b7280 ">
+                                                <path
+                                                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                            </svg>
+                                            <p class="text-gray-500 text-xs">Telkom University</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Card community event -->
-                            <div
-                                class="mb-2 flex justify-between w-full bg-gray-950 hover:border-purple-700 hover:border-2 border border-gray-700 rounded-md p-4">
-                                <div class="">
-                                    <h1 class="text-lg font-bold">Community Event 2</h1>
-                                    <p class="text-sm font-light">Jl. Sindangsari, Bandung
-                                    <p>
+
+                            <h1 class="text-lg font-semibold mb-2 mt-4">10 December 2024</h1>
+                            <!-- Event 2 -->
+                            <div onclick="location.href='com_3_eventInfo.html';"
+                                class="bg-gray-950 rounded-lg overflow-hidden mb-4 h-32 shadow-md flex border border-gray-100/20 hover:scale-105 event-card">
+                                <!-- Wrapper gambar -->
+                                <div class="relative w-1/2 h-full event-image-wrapper">
+                                    <img src="image/Event/5.jpg" alt="Background" class="w-full h-full object-cover">
+
+                                    <div class="absolute right-0 top-0 bg-gradient-to-l from-gray-950 h-full w-1/2 ">
+                                    </div>
                                 </div>
-                                <div class="justify-items-end">
-                                    <h1 class="text-xs font-light items-end">25/12/2024</h1>
-                                    <p class="text-xs font-light">09.00
-                                    <p>
-                                </div>
-                            </div>
-                            <!-- Card community event -->
-                            <div
-                                class="mb-2 flex justify-between w-full bg-gray-950 hover:border-purple-700 hover:border-2 border border-gray-700 rounded-md p-4">
-                                <div class="">
-                                    <h1 class="text-lg font-bold">Community Event 3</h1>
-                                    <p class="text-sm font-light">Jl. Sindangsari, Bandung
-                                    <p>
-                                </div>
-                                <div class="justify-items-end">
-                                    <h1 class="text-xs font-light items-end">25/12/2024</h1>
-                                    <p class="text-xs font-light">09.00
-                                    <p>
+                                <!-- Konten -->
+                                <div class="p-2 pr-4 flex-1 event-content flex flex-col justify-center">
+                                    <h3 class="text-lg font-bold mb-2">Break Dance Meet</h3>
+                                    <p class="text-gray-400 text-xs mb-2 text-justify">
+                                        Welcome to the "Development of Youth Resources" discussion forum...
+                                    </p>
+                                    <div class="flex justify-between">
+                                        <p class="text-gray-500 text-xs">21.00 WIB</p>
+                                        <div class="flex gap-1 items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="16px"
+                                                viewBox="0 -960 960 960" width="16px" fill="#6b7280 ">
+                                                <path
+                                                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                            </svg>
+                                            <p class="text-gray-500 text-xs">Telkom University</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -307,32 +364,6 @@
 
                     <!-- Sisi kanan -->
                     <div class="w-1/4 flex flex-col">
-                        <!-- Schedule -->
-                        <div class="bg-gray-900 rounded-md px-4 py-4 w-full">
-                            <div class="flex items-center gap-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-                                    width="26px" fill="#ffffff">
-                                    <path
-                                        d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
-                                </svg>
-                                <div>
-                                    <p class="font-bold text-sm">Date</p>
-                                    <p class="font-base text-xs">15/12/2024</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-                                    width="26px" fill="#ffffff">
-                                    <path
-                                        d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
-                                </svg>
-                                <div>
-                                    <p class="font-bold text-sm">Time</p>
-                                    <p class="font-base text-xs">09.00 - 12.00</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="border border-gray-700 rounded-lg w-full min-h-50 bg-gray-950 mt-4">
                             <div class="px-4 py-4">
                                 <div class="flex justify-between align-middle text-center">
@@ -364,14 +395,14 @@
                                     <div
                                         class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
                                         <img class="w-8 h-8 rounded-full" src="image/people/pep3.png" />
-                                        <div class="grow shrink basis-0 text-white text-base font-medium ">IoT
-                                            Hub</div>
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Fasya Sau...
+                                        </div>
                                     </div>
                                     <div
                                         class="mb-2 self-stretch p-2 bg-gray-900 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
                                         <img class="w-8 h-8 rounded-full" src="image/people/pep4.png" />
-                                        <div class="grow shrink basis-0 text-white text-base font-medium ">IoT
-                                            Hub</div>
+                                        <div class="grow shrink basis-0 text-white text-base font-medium ">Ratu Wiya...
+                                        </div>
                                     </div>
                                     <div
                                         class="self-stretch p-2 bg-gray-800 bg-opacity-20 hover:bg-opacity-50 rounded-md border border-gray-100/20 justify-start w-full items-center gap-3 inline-flex">
@@ -402,15 +433,9 @@
                                         </svg>
                                         Invite
                                     </div>
-
                                 </button>
                             </div>
                         </div>
-
-                        <a href="login.html"
-                            class="bg-white text-black font-semibold duration-500 px-6 py-3 hover:bg-gradient-to-b from-white to-purple-300 rounded-lg mt-4 text-center">
-                            End Discussion
-                        </a>
                     </div>
                 </div>
             </main>
